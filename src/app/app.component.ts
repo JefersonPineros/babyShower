@@ -30,7 +30,7 @@ export class AppComponent {
       closePage?.classList.add('final-close');
       setTimeout(() => {
         this.router.navigate(['home']);
-      }, 500);
-    }, 3100);
+      }, 200);
+    }, 3050);
   }
 }

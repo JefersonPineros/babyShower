@@ -1,14 +1,129 @@
 .container {
-    font-family: 'Merienda';
+  .container-paper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    gap: 3rem;
 
-    .container-paper {
-        background-image: url("/assets/img/cartaV1.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 100% 80%;
-        background-origin: inherit;
-        background-attachment: fixed;
-
-        padding: 30px;
+    .carta {
+      position: absolute;
+      animation: fade-in;
+      animation-fill-mode: forwards;
+      animation-duration: 2s;
+      img {
+        width: 100%;
+        height: 75%;
+      }
     }
+
+    .decoracion1 {
+      position: absolute;
+      top: 25%;
+      left: 26%;
+      animation: fade-in;
+      animation-fill-mode: forwards;
+      animation-duration: 2s;
+      img {
+        width: 60%;
+      }
+    }
+    .texto-inicial {
+      top: 27%;
+      position: absolute;
+      font-family: "Germania One", serif;
+      text-align: center;
+      animation: fade-in;
+      animation-fill-mode: forwards;
+      animation-duration: 6s;
+      p {
+        padding: 0px;
+        margin: 0px;
+      }
+      .text1 {
+        margin-top: 15px;
+        font-size: 25px;
+      }
+      .text2 {
+        font-size: 20px;
+        margin-top: 15px;
+      }
+      .text3 {
+        font-size: 25px;
+      }
+      .text4 {
+        font-size: 20px;
+      }
+    }
+    .decoracion2 {
+      position: absolute;
+      top: 46%;
+      left: 40%;
+      animation: fade-in;
+      animation-fill-mode: forwards;
+      animation-duration: 7s;
+      img {
+        width: 30%;
+      }
+    }
+    .ubicación-texto {
+      top: 53%;
+      position: absolute;
+      font-family: "Alice", serif;
+      text-align: center;
+      animation: fade-in;
+      animation-fill-mode: forwards;
+      animation-duration: 8s;
+    }
+
+    .aceptar-invitacion {
+      position: absolute;
+      top: 73%;
+      font-family: "Sancreek", serif;
+      z-index: 1;
+      font-size: 20px;
+      animation: fade-in;
+      animation-fill-mode: forwards;
+      animation-duration: 8s;
+    }
+    .separacion {
+      position: absolute;
+      border: 2px solid black;
+      width: 60%;
+      top: 77%;
+      animation: fade-in;
+      animation-fill-mode: forwards;
+      animation-duration: 2s;
+    }
+    .pluma {
+      position: absolute;
+      top: 57%;
+      left: 75%;
+      animation: fade-in;
+      animation-fill-mode: forwards;
+      animation-duration: 2s;
+      img {
+        width: 59%;
+      }
+    }
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
