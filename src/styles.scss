@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-image: url('/assets/img/fondoHarry2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-origin: inherit;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+  }

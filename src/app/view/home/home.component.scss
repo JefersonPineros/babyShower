@@ -1,0 +1,20 @@
+.container {
+    font-family: 'Merienda';
+    // background-image: url("/assets/img/fondo2.png");
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-origin: inherit;
+    // background-attachment: fixed;
+
+    .container-paper {
+        background-image: url("/assets/img/Paper-Photoroom.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 80%;
+        background-origin: inherit;
+        background-attachment: fixed;
+
+        padding: 30px;
+    }
+}
