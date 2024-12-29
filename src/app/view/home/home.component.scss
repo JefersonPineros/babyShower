@@ -20,7 +20,7 @@
 
     .decoracion1 {
       position: absolute;
-      top: 23%;
+      top: 25%;
       left: 26%;
       animation: fade-in;
       animation-fill-mode: forwards;
@@ -58,8 +58,8 @@
     }
     .decoracion2 {
       position: absolute;
-      top: 48%;
-      left: 40%;
+      top: 52%;
+      left: 41%;
       animation: fade-in;
       animation-fill-mode: forwards;
       animation-duration: 7s;
@@ -68,10 +68,10 @@
       }
     }
     .ubicación-texto {
-      top: 55%;
+      top: 60%;
       position: absolute;
       font-family: "Alice", serif;
-      font-size: 15px;
+      font-size: 12px;
       text-align: center;
       animation: fade-in;
       animation-fill-mode: forwards;
@@ -80,7 +80,7 @@
 
     .aceptar-invitacion {
       position: absolute;
-      top: 76%;
+      top: 80%;
       font-family: "Sancreek", serif;
       z-index: 1;
       font-size: 20px;
@@ -92,14 +92,14 @@
       position: absolute;
       border: 2px solid black;
       width: 60%;
-      top: 80%;
+      top: 85%;
       animation: fade-in;
       animation-fill-mode: forwards;
       animation-duration: 2s;
     }
     .pluma {
       position: absolute;
-      top: 66%;
+      top: 69%;
       left: 75%;
       animation: fade-in;
       animation-fill-mode: forwards;
@@ -107,6 +107,25 @@
       img {
         width: 40%;
       }
+    }
+  }
+}
+
+@media only screen and (min-width: 390px) and (max-width: 430px) {
+  .separacion {
+    top: 80% !important;
+  }
+  .pluma {
+    top: 66% !important;
+  }
+  .aceptar-invitacion {
+    top: 77% !important;
+  }
+
+  .decoracion2 {
+    top: 50%;
+    img {
+      width: 30%;
     }
   }
 }
