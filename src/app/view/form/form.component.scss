@@ -1,0 +1,56 @@
+.container-paper {
+  padding: 5%;
+  max-height: 800px;
+  overflow: hidden;
+  overflow-y: scroll;
+  border-radius: 10px;
+
+  background: rgb(255, 215, 136);
+  background: radial-gradient(
+    circle,
+    rgba(255, 215, 136, 1) 19%,
+    rgba(229, 195, 120, 1) 49%,
+    rgba(178, 150, 95, 1) 85%
+  );
+
+  h2 {
+    font-family: "Germania One", serif;
+  }
+}
+
+p-inputNumber {
+  width: 100%;
+}
+
+.full-w {
+  width: 100% !important;
+}
+
+.first-form {
+  label {
+    font-family: "Germania One", serif;
+  }
+}
+
+.button-font {
+  font-family: "Germania One" !important;
+}
+
+.p-button-label .p-component {
+  font-family: "Germania One", serif !important;
+}
+
+.texto-first {
+  font-family: "Alice", serif;
+}
+
+.alerta1 {
+  width: 100%;
+  border-radius: 5%;
+
+  padding: 8px;
+  span {
+    color: rgb(99, 17, 17);
+    font-family: "Germania One", serif !important;
+  }
+}
