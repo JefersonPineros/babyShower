@@ -62,18 +62,17 @@ export class FormComponent implements OnInit {
 
   ngOnInit(): void {
     this.spinner.show();
-    setTimeout(() => {
-      this.babyShowerService.getListItems().subscribe({
-        next: (resp) => {
-          this.listRegalos = resp;
-          this.spinner.hide();
-        },
-        error: (error) => {
-          console.log(error);
-          this.spinner.hide();
-        },
-      });
-    }, 3000);
+
+    this.babyShowerService.getListItems().subscribe({
+      next: (resp) => {
+        this.listRegalos = resp;
+        this.spinner.hide();
+      },
+      error: (error) => {
+        console.log(error);
+        this.spinner.hide();
+      },
+    });
   }
 
   confirmarAsistencias() {
