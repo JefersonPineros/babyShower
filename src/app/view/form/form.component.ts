@@ -62,47 +62,61 @@ export class FormComponent implements OnInit {
 
   ngOnInit(): void {
     this.spinner.show();
-    this.babyShowerService.getListItems().subscribe({
-      next: (resp) => {
-        this.listRegalos = resp;
-        this.spinner.hide();
-      },
-      error: (error) => {
-        console.log(error);
-        this.spinner.hide();
-      },
-    });
+    setTimeout(() => {
+      this.babyShowerService.getListItems().subscribe({
+        next: (resp) => {
+          this.listRegalos = resp;
+          this.spinner.hide();
+        },
+        error: (error) => {
+          console.log(error);
+          this.spinner.hide();
+        },
+      });
+    }, 3000);
   }
 
   confirmarAsistencias() {
     this.spinner.show();
-    setTimeout(() => {
-      if (
-        this.confirmarInvitado.nombre !== '' &&
-        this.confirmarInvitado.nombre !== undefined
-      ) {
-        this.selectRegalo = true;
-        this.babyShowerService
-          .insertarInvitado(this.confirmarInvitado)
-          .subscribe({
-            next: (resp) => {
-              this.spinner.hide();
-              alert(resp.status);
-            },
-            error: (error) => {
-              console.log(error);
-              this.spinner.hide();
-            },
-          });
-      } else {
-        this.showAlert1 = true;
-      }
-    }, 5000);
+
+    if (
+      this.confirmarInvitado.nombre !== '' &&
+      this.confirmarInvitado.nombre !== undefined
+    ) {
+      this.selectRegalo = true;
+      this.babyShowerService
+        .insertarInvitado(this.confirmarInvitado)
+        .subscribe({
+          next: (resp) => {
+            this.spinner.hide();
+            console.log(resp);
+          },
+          error: (error) => {
+            this.spinner.hide();
+            console.error(error);
+          },
+        });
+    } else {
+      this.showAlert1 = true;
+      this.spinner.hide();
+    }
   }
 
   confirmarRegalo() {
     if (this.selectCPanales !== null) {
       this.showAlert2 = false;
+
+      let listaRe: ListaRegalos[];
+
+      listaRe = this.listRegalos.filter((item) => {
+        return [this.selectC, this.selectCPanales].includes(item.id!);
+      });
+
+      this.babyShowerService.updateItem(listaRe).subscribe({
+        next: (resp) => {
+          alert(resp.status);
+        },
+      });
     } else {
       this.showAlert2 = true;
     }

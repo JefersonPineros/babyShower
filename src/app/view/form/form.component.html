@@ -97,7 +97,7 @@
                   <p-radioButton
                     [disabled]="item.cantidad! == 0"
                     name="{{ item.nombre }}"
-                    [value]="item.nombre"
+                    [value]="item.id"
                     inputId="{{ item.id }}"
                     [(ngModel)]="selectC"
                   >
@@ -169,10 +169,6 @@
   </div>
 </div>
 <ngx-spinner
-  bdColor="rgba(0, 0, 0, 0.8)"
-  size="medium"
-  color="#fff"
-  type="line-scale-party"
-  [fullScreen]="true"
-  ><p style="color: white"></p
+  bdColor="rgba(0, 0, 0, 0.9)"
+  template="<img style='width: 120%' src='./assets/img/carga1.gif' />"
 ></ngx-spinner>

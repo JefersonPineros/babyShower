@@ -20,7 +20,7 @@ export class BabyShowerService {
     return this.http.post<any>(`${this.env.babyShowerBack}invitados`, invitado);
   }
 
-  updateItem(id: number): Observable<any> {
-    return this.http.get<any>(`${this.env.babyShowerBack}lista/${id}`);
+  updateItem(listaRe: ListaRegalos[]): Observable<any> {
+    return this.http.post<any>(`${this.env.babyShowerBack}lista`, listaRe);
   }
 }
