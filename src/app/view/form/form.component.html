@@ -1,3 +1,4 @@
+@if (!finalPage) {
 <div class="container grid">
   <div class="col-12 p-5">
     <div
@@ -168,12 +169,47 @@
     </div>
   </div>
 </div>
+} @else {
+
+<div class="grid">
+  <div class="col">
+    <div class="bordes-final">
+      <img class="borde-1" src="./assets/img/borde-Photoroom.png" alt="" />
+      <img class="borde-2" src="./assets/img/borde-Photoroom.png" alt="" />
+    </div>
+    <div class="grid">
+      <div class="col-12 texto-re">
+        <main role="main" class="main-content" id="main-content">
+          <div class="grid">
+            <div class="col-12 img-harry">
+              <img src="./assets/img/Harry.png" alt="" />
+            </div>
+          </div>
+          <div class="titleCont">
+            <h1 class="main-title" id="main-title">
+              Estás son las opciones<br /><span>que has elegido:</span>
+              @for (item of regalosSeleccionados; track $index) {
+
+              <br /><span style="padding-left: -20px">"{{ item.nombre }}"</span>
+              }
+
+              <br /><span>Te esperamos!!!</span>
+            </h1>
+          </div>
+          <canvas id="noise" class="noise"></canvas>
+          <div class="vignette"></div>
+        </main>
+      </div>
+    </div>
+  </div>
+</div>
+}
+
 <ngx-spinner
   bdColor="rgba(0, 0, 0, 1)"
   size="medium"
   [fullScreen]="true"
   template="
     <img src='./assets/img/carga1.gif' />
-  
   "
 ></ngx-spinner>

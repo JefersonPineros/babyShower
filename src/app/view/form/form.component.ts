@@ -22,6 +22,10 @@ export class FormComponent implements OnInit {
   public showAlert1: boolean = false;
   public showAlert2: boolean = false;
 
+  public regalosSeleccionados: ListaRegalos[] = [];
+
+  public finalPage: boolean = false;
+
   constructor(
     private babyShowerService: BabyShowerService,
     private spinner: NgxSpinnerService
@@ -65,7 +69,9 @@ export class FormComponent implements OnInit {
 
     this.babyShowerService.getListItems().subscribe({
       next: (resp) => {
-        this.listRegalos = resp;
+        this.listRegalos = resp.sort((a, b) => {
+          return a.id! - b.id!;
+        });
         this.spinner.hide();
       },
       error: (error) => {
@@ -113,9 +119,16 @@ export class FormComponent implements OnInit {
 
       this.babyShowerService.updateItem(listaRe).subscribe({
         next: (resp) => {
-          alert(resp.status);
+          console.log(resp);
+          this.regalosSeleccionados = listaRe;
         },
       });
+
+      let body = document.querySelector('body');
+      body!.style.backgroundImage = 'none';
+      body!.style.backgroundColor = 'black';
+
+      this.finalPage = true;
     } else {
       this.showAlert2 = true;
     }
