@@ -5,11 +5,22 @@ import { Router } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {
-  constructor(private router: Router) {}
+export class AppComponent implements OnInit {
+  constructor(private router: Router) {
+    // audio!.loop = true;
+    // audio!.volume = 75;
+  }
+
+  ngOnInit(): void {}
+
   title = 'BabyShowerFront';
 
   abrirCarta() {
+    let audio = document.getElementById('harry-mp3') as HTMLAudioElement;
+    audio.volume = 0.6;
+    audio.loop = true;
+    audio?.play();
+
     const coverElement = document.querySelector('.cover');
     coverElement?.classList.add('open-cover');
 
@@ -18,6 +29,10 @@ export class AppComponent {
 
     const upBuho = document.querySelector('.buho');
     upBuho?.classList.add('up-buho');
+
+    setTimeout(() => {
+      this.changePage();
+    }, 4000);
   }
 
   changePage() {

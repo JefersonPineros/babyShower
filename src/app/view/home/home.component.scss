@@ -104,6 +104,16 @@
       animation-fill-mode: forwards;
       animation-duration: 8s;
     }
+    .aceptar-invitacion-2 {
+      position: absolute;
+      top: 81%;
+      font-family: "Sancreek", serif;
+      z-index: 1;
+      font-size: 15px;
+      animation: fade-in;
+      animation-fill-mode: forwards;
+      animation-duration: 8.5s;
+    }
     .separacion {
       position: absolute;
       border: 2px solid black;
@@ -116,12 +126,12 @@
     .pluma {
       position: absolute;
       top: 69%;
-      left: 75%;
+      left: 80%;
       animation: fade-in;
       animation-fill-mode: forwards;
       animation-duration: 2s;
       img {
-        width: 40%;
+        width: 45%;
       }
     }
   }
