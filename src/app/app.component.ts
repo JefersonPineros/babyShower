@@ -21,8 +21,6 @@ export class AppComponent {
   }
 
   changePage() {
-    console.log('Hola mundo');
-
     const closePage = document.querySelector('.container');
     closePage?.classList.add('close-page');
 
