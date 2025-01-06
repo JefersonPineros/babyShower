@@ -123,16 +123,6 @@
       animation-fill-mode: forwards;
       animation-duration: 8s;
     }
-    .aceptar-invitacion-2 {
-      position: absolute;
-      top: 81%;
-      font-family: "Sancreek", serif;
-      z-index: 1;
-      font-size: 15px;
-      animation: fade-in;
-      animation-fill-mode: forwards;
-      animation-duration: 8.5s;
-    }
     .separacion {
       position: absolute;
       border: 2px solid black;
@@ -169,11 +159,21 @@
       width: 16% !important;
     }
   }
+  .aceptar-invitacion {
+    top: 82% !important;
+  }
+
+  .separacion {
+    top: 85% !important;
+  }
 }
 
 @media only screen and (min-width: 390px) and (max-width: 430px) {
+  .aceptar-invitacion {
+    top: 82% !important;
+  }
   .separacion {
-    top: 80% !important;
+    top: 85% !important;
   }
   .pluma {
     top: 66% !important;
