@@ -66,28 +66,47 @@
         margin-top: 15px;
       }
       .text3 {
-        font-size: 25px;
+        font-size: 31px;
       }
       .text4 {
         font-size: 20px;
       }
     }
     .decoracion2 {
-      position: absolute;
-      top: 52%;
-      left: 41%;
-      animation: fade-in;
-      animation-fill-mode: forwards;
-      animation-duration: 7s;
-      img {
+      .per-1 {
+        position: absolute;
+        top: 47%;
+        left: 35%;
+        animation: fade-in;
+        animation-fill-mode: forwards;
+        animation-duration: 7s;
         width: 28%;
+      }
+      .per-2 {
+        position: absolute;
+        top: 44%;
+        left: 75%;
+        animation: fade-in;
+        animation-fill-mode: forwards;
+        animation-duration: 7s;
+        width: 16%;
+      }
+
+      .per-3 {
+        position: absolute;
+        top: 44%;
+        left: 5%;
+        animation: fade-in;
+        animation-fill-mode: forwards;
+        animation-duration: 7s;
+        width: 25%;
       }
     }
     .ubicación-texto {
       top: 60%;
       position: absolute;
       font-family: "Alice", serif;
-      font-size: 12px;
+      font-size: 14px;
       text-align: center;
       animation: fade-in;
       animation-fill-mode: forwards;
@@ -124,15 +143,30 @@
       animation-duration: 2s;
     }
     .pluma {
-      position: absolute;
-      top: 69%;
-      left: 80%;
-      animation: fade-in;
-      animation-fill-mode: forwards;
-      animation-duration: 2s;
       img {
-        width: 45%;
+        width: 10%;
+        position: absolute;
+        top: 68%;
+        left: 84%;
+        animation: fade-in;
+        animation-fill-mode: forwards;
+        animation-duration: 2s;
       }
+    }
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 389px) {
+  .decoracion2 {
+    .per-1 {
+      top: 50% !important;
+      left: 37% !important;
+      width: 24% !important;
+    }
+    .per-2 {
+      top: 50% !important;
+      left: 67% !important;
+      width: 16% !important;
     }
   }
 }
@@ -146,14 +180,6 @@
   }
   .aceptar-invitacion {
     top: 77% !important;
-  }
-
-  .decoracion2 {
-    top: 48% !important;
-    left: 38% !important;
-    img {
-      width: 35% !important;
-    }
   }
 }
 
